@@ -1,6 +1,7 @@
 import { useState, useRef, Fragment, } from "react";
 import html2canvas from "html2canvas";
 import { fileToDataUri, isImageFile } from "./helper/helper";
+import infoImg from './assets/img/img.png'
 import { useFormik } from "formik";
 function App() {
     const previewRef = useRef(null);
@@ -143,7 +144,7 @@ function App() {
                     <img src={imgSrc} alt="work" />
                     <div className="container-inner" >
                         <div className="inf-i">
-                            <img className="inner-img" src="https://cdn.pixabay.com/photo/2016/06/15/15/02/info-1459077_1280.png" alt="" />
+                            <img className="inner-img" src={infoImg} alt="logo" />
                         </div>
                         <div className="inner-input" style={{ padding: "0px 6px 16px 6px" }}>
                             {formType === "cusForm" ?
