@@ -148,7 +148,7 @@ function App() {
                         </div>
                         <div className="inner-input" style={{ padding: "0px 6px 16px 6px" }}>
                             {formType === "cusForm" ?
-                                <p style={{ whiteSpace: 'normal', wordWrap: "anywhere", lineBreak: "auto" }} dangerouslySetInnerHTML={{ __html: textCustomForm.replace('\n', '<br />') }}></p> :
+                                <p style={{ whiteSpace: 'normal', wordWrap: "anywhere", lineBreak: "auto" }} dangerouslySetInnerHTML={{ __html: textCustomForm.replace(/\n\r?/g, '<br />') }}></p> :
                                 <Fragment>
                                     <p style={{ whiteSpace: 'normal', wordWrap: "anywhere", lineBreak: "auto" }} >Full name: {formik.values.fullName}</p>
                                     <p style={{ whiteSpace: 'normal', wordWrap: "anywhere", lineBreak: "auto" }} >Day of birth: {formik.values.dob}</p>
